@@ -1,0 +1,24 @@
+/* 簡単な見た目の調整（CSS） */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #fce4ec;
+  /* ちょっと可愛いピンク色 */
+}
