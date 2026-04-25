@@ -1,5 +1,8 @@
 // ページが読み込まれたら自動的に実行される処理
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', databaseLoad);
+
+async function databaseLoad(){
+  console.log("databaseLoad start");
 
   // 1. さっき成功したAPI（/api/users）にアクセスしてJSONを取得！
   const response = await fetch('/api/users');
@@ -23,4 +26,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 完成した行をtbodyに追加する
     tbody.appendChild(tr);
   });
-});
+}
