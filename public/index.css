@@ -1,24 +1,70 @@
-/* 簡単な見た目の調整（CSS） */
+/* 全体のリセットと背景 */
 body {
-  font-family: sans-serif;
-  padding: 20px;
-  color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 { text-align: center; color: #2c3e50; }
+
+/* カード風のデザイン */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* フォーム周り */
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    flex: 1;
+}
+
+/* ボタンのデザイン */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.btn.primary { background-color: #ff7675; color: white; }
+.btn.primary:hover { background-color: #d63031; }
+.btn.secondary { background-color: #b2bec3; color: white; }
+.btn.secondary:hover { background-color: #636e72; }
+.btn.edit { background-color: #74b9ff; color: white; padding: 5px 10px; font-size: 14px;}
+.btn.delete { background-color: #ff7675; color: white; padding: 5px 10px; font-size: 14px;}
+
+/* テーブルのデザイン */
 table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 500px;
-  margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
 }
-
 th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
 }
-
-th {
-  background-color: #fce4ec;
-  /* ちょっと可愛いピンク色 */
-}
+th { background-color: #ffeaa7; color: #2d3436; border-radius: 6px 6px 0 0; }
+tr:hover { background-color: #fafafa; }
