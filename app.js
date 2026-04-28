@@ -20,7 +20,7 @@ app.get('/api/users', (req, res) => {
 // Create: 新規ユーザー追加（POST）
 app.post('/api/users', (req, res) => {
   const { name, age } = req.body;// ブラウザから送られた名前と年齢を受け取る
-  const insert = db.prepare('INSERT INTO users (name, age) VALUEAS (?, ?)');
+  const insert = db.prepare('INSERT INTO users (name, age) VALUES (?, ?)');
   const info = insert.run(name, age);
   res.json({ success: true, id: info.lastInsertRowid });
 });
